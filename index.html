@@ -1,187 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KasiCanvas - Street to Screen</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KasiCanvas - Street to Screen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Outfit:wght@300;500;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ===== HEADER ===== -->
-    <header class="header">
-        <nav class="nav">
-            <a href="https://ibb.co/bpcJjBG" class="logo"><img src="https://i.ibb.co/zhG3QgKc/i-Love-PDF2-bg-removed.png" alt="logo" border="0"></a>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="gallery.html">Creatives</a></li>
-                <li><a href="contact.html">Events</a></li>
-            </ul>
+  <nav class="nav-bar">
+    <div class="logo">KasiCanvas</div>
 
-            <div class="nav-buttons">
-                <a href="login-page.html" class="btn-outline">Log In</a>
-                <a href="registration-page.html" class="btn-solid">Sign Up</a>
-            </div>
-        </nav>
-    </header>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="gallery.html">Creatives</a></li>
+      <li><a href="contact.html">Events</a></li>
+    </ul>
 
-    <!-- ==== HERO SECTION ==== -->
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
+    <div class="nav-actions">
+      <a href="login-page.html" class="nav-login">Log In</a>
+      <a href="registration-page.html" class="nav-signup">Sign Up</a>
 
-        <div class="hero-content">
-            <h1>From The Street to Screen</h1>
-            <p>Welcome to KasiCanvas, where township creativity meets the digital world.</p>
-            <p>Digitizing kasi talent and giving creatives a professional space to be seen, celebrated, and connected with opportunities.</p>
+      <div class="menu-btn" aria-label="Open menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </nav>
 
-            <div class="hero-buttons">
-                <a href="gallery.html" class="hero-btn-solid">Explore Creatives</a>
-                <a href="registration-page.html" class="hero-btn-outline">Join as a Creative</a>
-            </div>
-        </div>
+  <main>
+    
+    <section class="hero-section">
+      <div class="hero-text-container">
+        <h1 class="reveal-text">FROM THE</h1>
+        <h1 class="reveal-text outline">STREETS</h1>
+        <h1 class="reveal-text">TO THE <span class="highlight">SCREEN.</span></h1>
+      </div>
+      <div class="scroll-indicator">
+        <span>SCROLL TO DISCOVER</span>
+      </div>
     </section>
 
-    <!-- ==== INTRO SECTION ==== -->
-    <section class="intro-section">
-        <div class="intro-content">
-            <h2>Discover the Heart of Kasi Creativity</h2>
-            <p>KasiCanvas is your gateway to the vibrant world of township talent.</p>
-            <p>We showcase a diverse range of creatives, from visual artists and photographers to fashion designers, all rooted in the rich culture of our communities.</p>
-            <p>Join us in celebrating and empowering the artists who bring Kasi stories to life.</p>
-        </div>
-    </section>
+    <div class="marquee-container">
+      <div class="marquee-content">
+        <span>DIGITIZING KASI TALENT — UPLIFTING CREATIVES — CONNECTING CULTURE — </span>
+        <span>DIGITIZING KASI TALENT — UPLIFTING CREATIVES — CONNECTING CULTURE — </span>
+      </div>
+    </div>
 
-    <!-- ==== GALLERY SECTION ==== -->
-    <section class="gallery-section">
-        <div class="section-header">
-            <h2>Featured Talent</h2>
-            <div class="filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="visual-art">Visual Art</button>
-                <button class="filter-btn" data-filter="photography">Photography</button>
-                <button class="filter-btn" data-filter="fashion">Fashion</button>
+    <section class="about-section">
+        <div class="about-container">
+            <div class="manifesto-text">
+                <p>WE BELIEVE TALENT IS EQUALLY DISTRIBUTED, BUT <span class="outline">OPPORTUNITY</span> IS NOT.</p>
+                <p>KASICANVAS IS THE DIGITAL BRIDGE CONNECTING <span class="highlight">TOWNSHIP CREATIVES</span> TO THE GLOBAL STAGE.</p>
             </div>
-        </div>
-
-        <div class="gallery-grid">
-
-            <!-- CARD 1 -->
-            <div class="creative-card" data-category="visual-art">
-                <img src="https://i.ibb.co/TDpqtLN7/creative-artwork.jpg"  alt="visual-art">
-                <span class="location-badge">Johhanesburg</span>
-                <div class="card-content">
-                    <h3>Lebo Artistry</h3>
-                    <span>Visual Artist</span>
-                    <br>
-                    <a href="#" target="_blank">View Portfolio</a>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 class="counter" data-target="500">0</h3>
+                    <p>Creatives Joined</p>
                 </div>
-            </div>
-
-            <!-- CARD 2 -->
-            <div class="creative-card" data-category="photography">
-                <img src="https://i.ibb.co/hFBsrD1j/creative-photography.jpg" alt="photography">
-                <span class="location-badge">Cape Town</span>
-                <div class="card-content">
-                    <h3>Sbu Lens</h3>
-                    <span>Photographer</span>
-                    <br>
-                    <a href="#" target="_blank">View Portfolio</a>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>Kasi Locations</p>
                 </div>
-            </div>
-
-            <!-- CARD 3 -->
-            <div class="creative-card" data-category="fashion">
-                <img src="https://i.ibb.co/tM7HwMvT/fashion.jpg" alt="fashion">
-                <span class="location-badge">Umlazi</span>
-                <div class="card-content">
-                    <h3>Kasi Threads</h3>
-                    <span>Fashion Designer</span>
-                    <br>
-                    <a href="#" target="_blank">View Portfolio</a>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="100">0</h3>
+                    <p>% Local Talent</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==== FEATURES SECTION ==== -->
-    <section class="features-section">
-        <div class="features-header">
-            <h2>Why KasiCanvas?</h2>
-            <p>Built to uplift local talent and make discovery simple for clients and collaborators.</p>
+    <section class="kasi-gallery-section">
+      <div class="gallery-header">
+        <h2>KASI CREATIVES <br> <span class="marker-font">SHOWCASE</span></h2>
+        <p>Explore the vibrant work of our featured artists.</p>
+      </div>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1549497557-d54e61a6840d?q=80&w=800&auto=format&fit=crop" alt="Mural">
+              <div class="card-info">
+                <h3>THABO MOLEFE</h3>
+                <p>Mural Artist • Soweto</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop" alt="Music">
+              <div class="card-info">
+                <h3>THE BEATS</h3>
+                <p>Music Group • Umlazi</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800&auto=format&fit=crop" alt="Fashion">
+              <div class="card-info">
+                <h3>KASI THREADS</h3>
+                <p>Fashion • Alex</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery-card">
+              <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=800&auto=format&fit=crop" alt="Portrait">
+              <div class="card-info">
+                <h3>AMANDLA LENS</h3>
+                <p>Photography • Cape Town</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="features-grid">
-            <div class="feature-card">
-                <i class="fa-solid fa-shield-heart"></i>
-                <h3>Safe & Respectful</h3>
-                <p>We promote a positive space that respects creators and their work.</p>
-            </div>
-
-            <div class="feature-card">
-                <i class="fa-solid fa-bolt"></i>
-                <h3>Quick Discovery</h3>
-                <p>Clients can browse talent by category and reach creatives faster.</p>
-            </div>
-
-            <div class="feature-card">
-                <i class="fa-solid fa-certificate"></i>
-                <h3>Portfolio Ready</h3>
-                <p>A clean profile look that helps creatives stand out professionally.</p>
-            </div>
-
-            <div class="feature-card">
-                <i class="fa-solid fa-location-dot"></i>
-                <h3>Hyper-Local</h3>
-                <p>Celebrating township creativity and connecting it to real opportunities.</p>
-            </div>
-        </div>
+        <div class="swiper-pagination"></div>
+      </div>
     </section>
 
-    <!-- ==== FOOTER ==== -->
-    <footer class="footer">
-        <div class="footer-content">
+    <section class="cta-section">
+      <div class="cta-content">
+        <h1>ARE YOU <span class="outline">NEXT?</span></h1>
+        <p>Join the movement. Put your Kasi on the map.</p>
+        <a href="registration-page.html" class="big-btn">JOIN AS A CREATIVE</a>
+      </div>
+    </section>
 
-            <div class="footer-section">
-                <h3>KasiCanvas</h3>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
+  </main>
 
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: info@kasicanvas.com</p>
-                <p>Phone: +27 123 456 789</p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Connect With Us</h3>
-                <ul>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
-                </ul>
-            </div>
-
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2 class="logo">KasiCanvas</h2>
+        <p>From the streets to the screen.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Creatives</a></li>
+          <li><a href="login-page.html">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
         </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 KasiCanvas. All rights reserved.</p>
+    </div>
+  </footer>
 
-        <div class="footer-bottom">
-            <p>&copy; 2026 KasiCanvas. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
