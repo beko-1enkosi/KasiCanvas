@@ -130,5 +130,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // 8. MOUSE PARALLAX FOR ICONS
+  const heroSection = document.querySelector(".hero-section");
   
+  if (heroSection && window.gsap) {
+    heroSection.addEventListener("mousemove", (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 100; 
+      const y = (e.clientY / window.innerHeight - 0.5) * 100; 
+
+      document.querySelectorAll(".floater").forEach(el => {
+        const speed = el.getAttribute("data-speed");
+        
+        gsap.to(el, {
+          x: x * speed, 
+          y: y * speed, 
+          duration: 1,  
+          ease: "power2.out"
+        });
+      });
+    });
+  }
+
+  // 10. KARAOKE TEXT REVEAL (Option 1)
+  if (window.gsap && window.ScrollTrigger) {
+    gsap.utils.toArray(".manifesto-text p").forEach(text => {
+      gsap.to(text, {
+        backgroundPosition: "0% 0", 
+        ease: "none",
+        scrollTrigger: {
+          trigger: text,
+          start: "top 80%", 
+          end: "bottom 50%", 
+          scrub: 1, 
+        }
+      });
+    });
+  }
 });
